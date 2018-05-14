@@ -1,0 +1,14 @@
+2018-05-14 11:27:44.622201+0200 layoutIfOrSetNeeds[81784:37081871] [[CustomView alloc] init]
+2018-05-14 11:27:44.622433+0200 layoutIfOrSetNeeds[81784:37081871] [view setNeedsLayout] // does nothing
+2018-05-14 11:27:44.622788+0200 layoutIfOrSetNeeds[81784:37081871] [view layoutIfNeeded] // layout the view even though it's offscreen
+2018-05-14 11:27:44.622914+0200 layoutIfOrSetNeeds[81784:37081871] Laying out 0x7f9760e01130 and it's subviews.
+2018-05-14 11:27:44.623084+0200 layoutIfOrSetNeeds[81784:37081871] [view layoutIfNeeded] // layout the view even though it was done in previous line
+2018-05-14 11:27:44.623208+0200 layoutIfOrSetNeeds[81784:37081871] [self.view addSubview:view] // add to the view hierarchy (setNeedsLayout is called here automatically)
+2018-05-14 11:27:44.623482+0200 layoutIfOrSetNeeds[81784:37081871] 3 second delay...
+2018-05-14 11:27:44.630591+0200 layoutIfOrSetNeeds[81784:37081871] Laying out 0x7f9760e01130 and it's subviews.
+2018-05-14 11:27:47.623775+0200 layoutIfOrSetNeeds[81784:37081871] [view setNeedsLayout] // again does nothing
+2018-05-14 11:27:47.623985+0200 layoutIfOrSetNeeds[81784:37081871] [view layoutIfNeeded] // layout the view even thoug nothing changed
+2018-05-14 11:27:47.624501+0200 layoutIfOrSetNeeds[81784:37081871] Laying out 0x7f9760e01130 and it's subviews.
+2018-05-14 11:27:47.624833+0200 layoutIfOrSetNeeds[81784:37081871] [view setFrame:CGRectMake(0, 0, 10.0, 10.0)] // layout the view because frame changed (setNeedsLayout is called here automatically)
+2018-05-14 11:27:47.625296+0200 layoutIfOrSetNeeds[81784:37081871] Laying out 0x7f9760e01130 and it's subviews.
+
